@@ -1,0 +1,159 @@
+{
+    "metadata": {
+        "streamsync_version": "0.1.7"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "parentId": null,
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "compact",
+                "emptinessColor": "#e9eef1"
+            },
+            "parentId": "root",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "28d3885b-0fb8-4d41-97c6-978540015431": {
+            "id": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "type": "section",
+            "content": {
+                "title": "",
+                "snapMode": "no",
+                "containerShadow": "0px 4px 11px -12px #000000"
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "6dfdb015-044c-4fa5-9f74-41745959a665": {
+            "id": "6dfdb015-044c-4fa5-9f74-41745959a665",
+            "type": "textinput",
+            "content": {
+                "label": "Name"
+            },
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 1,
+            "handlers": {
+                "ss-change": "onchange_name"
+            },
+            "binding": {
+                "eventType": "ss-change",
+                "stateRef": "name"
+            },
+            "visible": true
+        },
+        "aa322385-e7df-47b9-b069-fc4c0db6ee52": {
+            "id": "aa322385-e7df-47b9-b069-fc4c0db6ee52",
+            "type": "textinput",
+            "content": {
+                "label": "Email"
+            },
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 3,
+            "handlers": {
+                "ss-change": "onchange_email"
+            },
+            "binding": {
+                "eventType": "ss-change",
+                "stateRef": "email"
+            },
+            "visible": true
+        },
+        "31610d3d-48e7-4fc8-a5b6-90f1277de0a1": {
+            "id": "31610d3d-48e7-4fc8-a5b6-90f1277de0a1",
+            "type": "checkboxinput",
+            "content": {
+                "label": "",
+                "options": "{\n  \"val\": \"Do you allow us to contact you with any further questions?\"\n}"
+            },
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 5,
+            "handlers": {},
+            "binding": {
+                "eventType": "ss-options-change",
+                "stateRef": "further_contact"
+            },
+            "visible": "show_further_contact"
+        },
+        "af06eff0-7309-4076-aac8-0308015fa40d": {
+            "id": "af06eff0-7309-4076-aac8-0308015fa40d",
+            "type": "textareainput",
+            "content": {
+                "label": "Comments",
+                "rows": "5"
+            },
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 6,
+            "handlers": {},
+            "binding": {
+                "eventType": "ss-change",
+                "stateRef": "feedback"
+            },
+            "visible": true
+        },
+        "e99fc18d-7176-4c23-896e-cc0ef7fa1d83": {
+            "id": "e99fc18d-7176-4c23-896e-cc0ef7fa1d83",
+            "type": "button",
+            "content": {
+                "text": "Submit",
+                "buttonColor": "lightgreen",
+                "icon": "mail-send"
+            },
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 7,
+            "handlers": {
+                "click": "handle_button_click"
+            },
+            "visible": true
+        },
+        "96941df6-23e2-4469-b49c-2a16a1b003e3": {
+            "id": "96941df6-23e2-4469-b49c-2a16a1b003e3",
+            "type": "text",
+            "content": {
+                "text": "This is not a valid email!",
+                "primaryTextColor": "red"
+            },
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 4,
+            "handlers": {},
+            "visible": "is_invalid_email"
+        },
+        "fd935489-f54d-42c8-be5f-5d4498fd5bbf": {
+            "id": "fd935489-f54d-42c8-be5f-5d4498fd5bbf",
+            "type": "text",
+            "content": {
+                "text": "Please provide a name!",
+                "primaryTextColor": "red"
+            },
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 2,
+            "handlers": {},
+            "visible": "name_not_exists"
+        },
+        "147cd3a5-fa1d-4c29-a843-caf02ec20002": {
+            "id": "147cd3a5-fa1d-4c29-a843-caf02ec20002",
+            "type": "heading",
+            "content": {
+                "text": "Hello, @{name}"
+            },
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        }
+    }
+}

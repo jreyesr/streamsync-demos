@@ -1,0 +1,107 @@
+{
+    "metadata": {
+        "streamsync_version": "0.1.7"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "parentId": null,
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "compact",
+                "emptinessColor": "#e9eef1"
+            },
+            "parentId": "root",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "28d3885b-0fb8-4d41-97c6-978540015431": {
+            "id": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "type": "section",
+            "content": {
+                "title": "",
+                "snapMode": "yes",
+                "containerShadow": "0px 4px 11px -12px #000000"
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "d4a5e62c-c6fe-49c4-80d4-33862af8727d": {
+            "id": "d4a5e62c-c6fe-49c4-80d4-33862af8727d",
+            "type": "columns",
+            "content": {},
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c2519671-9ce7-44e7-ba4e-b0efda9cb20e": {
+            "id": "c2519671-9ce7-44e7-ba4e-b0efda9cb20e",
+            "type": "column",
+            "content": {
+                "width": "1",
+                "verticalAlignment": "",
+                "horizontalAlignment": "",
+                "isSticky": ""
+            },
+            "parentId": "d4a5e62c-c6fe-49c4-80d4-33862af8727d",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "3d3bd358-0017-4ee4-b63b-e65902a4f13e": {
+            "id": "3d3bd358-0017-4ee4-b63b-e65902a4f13e",
+            "type": "sliderinput",
+            "content": {
+                "label": "Hour of day",
+                "minValue": "0",
+                "maxValue": "23",
+                "stepSize": "1"
+            },
+            "parentId": "c2519671-9ce7-44e7-ba4e-b0efda9cb20e",
+            "position": 0,
+            "handlers": {
+                "ss-number-change": "recalculate"
+            },
+            "binding": {
+                "eventType": "ss-number-change",
+                "stateRef": "hod"
+            }
+        },
+        "496f90d4-8a71-454c-b0b2-563471c53d72": {
+            "id": "496f90d4-8a71-454c-b0b2-563471c53d72",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{plotly}"
+            },
+            "parentId": "c2519671-9ce7-44e7-ba4e-b0efda9cb20e",
+            "position": 2,
+            "handlers": {},
+            "visible": true
+        },
+        "469ea4fd-77d0-4c59-b90f-b62d33deb681": {
+            "id": "469ea4fd-77d0-4c59-b90f-b62d33deb681",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{plotly_bars}"
+            },
+            "parentId": "c2519671-9ce7-44e7-ba4e-b0efda9cb20e",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        }
+    }
+}
