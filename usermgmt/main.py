@@ -8,10 +8,13 @@ import httpx # This is sometimes pulled in by FastAPI
 load_dotenv()  # now the contents of .env are available on os.environ/os.getenv
 client = httpx.Client(base_url=os.environ["API_URL"]) # Could also add auth details here, if they existed!
 
-def action_clicked(state, payload, *args, **kwargs):
-    print(state)
-    print(payload)
-    print(args, kwargs)
+def action_clicked(state, payload, context, *args, **kwargs):
+    current_user = context["item"]
+    print(current_user)
+    print("Toggling user", current_user["id"])
+    # Call the REST API
+    
+    get_all_users() # Refresh the users, if the REST API worked...
 
 def get_all_users() -> list[dict[str, Any]]:
     """Fetches all users from the remote API"""
