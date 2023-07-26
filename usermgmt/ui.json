@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "streamsync_version": "0.1.7"
+        "streamsync_version": "0.1.10"
     },
     "components": {
         "root": {
@@ -162,18 +162,7 @@
             "parentId": "7dc3fb8b-7f16-465d-b178-2f0a85714869",
             "position": 1,
             "handlers": {},
-            "visible": "item.blocked"
-        },
-        "b39f9493-9f43-4641-baf3-62d2340efa41": {
-            "id": "b39f9493-9f43-4641-baf3-62d2340efa41",
-            "type": "text",
-            "content": {
-                "text": "@{item.blocked}"
-            },
-            "parentId": "7dc3fb8b-7f16-465d-b178-2f0a85714869",
-            "position": 2,
-            "handlers": {},
-            "visible": true
+            "visible": "item.unblocked"
         },
         "97bb1de7-e8ab-4b9a-847f-674ed35f98a9": {
             "id": "97bb1de7-e8ab-4b9a-847f-674ed35f98a9",

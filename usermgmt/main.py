@@ -22,7 +22,7 @@ def get_all_users() -> list[dict[str, Any]]:
 
 
 def prepare_users(users: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    return {str(u["id"]): u | {"action": "Unblock" if u["blocked"] else "Block"} for u in users}
+    return {str(u["id"]): u | {"unblocked": not u["blocked"], "action": "Unblock" if u["blocked"] else "Block"} for u in users}
 
 
 # Initial state
